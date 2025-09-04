@@ -1,0 +1,38 @@
+div{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+/* Media Querries 
+media querry: Media querry ka use karke hum different type ke display size par hamara element kaise dikhega ye set kar sakte hai. isme hum @ ka use karke likhte hai. kuch types iss prakar ke hai.
+
+@media (width: ) : iss tarah se hum @media tag ka use kar sakte hai css me. iss tarah se jab yadi size 600px dete hai toh jab display size 600px ka hoga tab ye wali media querry chalegi aur iske ander jo bhi task hoga wo perform hoga.
+
+@media (height: ) : iss tarah se hum @media tag ka use kar sakte hai css me. iss tarah se jab yadi size 600px dete hai toh jab display size 600px ka hoga tab ye wali media querry chalegi aur iske ander jo bhi task hoga wo perform hoga.
+
+@media (min height: ): iss tarah se bhi height dekar kuch bhi task perform kar saktee hai. iss tarah se jab yadi height 600px dete hai toh jab display height 600px se adhik hoga tab ye waali condition apply hogi aur iske ander jo bhi task hoga wo perform hoga. yadi display size 600px se kam hai toh ye waali condition nahi work karegi .
+
+@media (max-width: )-iss tarah se bhi hum media tag ka use kar sakte hai. iss tarah se jab yadi size 600px dete hai toh jab display size 0px - 600px tak ka hoga tab ye waali condition apply hogi aur iske ander jo bhi task hoga wo perform hoga.
+@media (min-width: ) and @media (max-width: ): iss type se hum range wise bhi media querry daal kar css use kar sakte hai  */
+
+@media (width: 600px){
+    div{
+        background-color: green;
+    }
+}
+/* @media (max-width: 598px)
+{
+    div{
+        background-color: blue;
+    }
+} */
+@media (min-width: 601px){
+    div{
+        background-color: yellow;
+    }
+}
+@media (min-width: 200px) and (max-width: 300px){
+    div{
+        background-color: rgb(245, 177, 7);
+    }
+}

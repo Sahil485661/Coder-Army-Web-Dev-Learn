@@ -1,0 +1,61 @@
+/* Animation: to animate an element from one style to another style.
+ syntax: 
+ frames me kaise syntex denge wo kuch iss type se hoga.
+ "@keyframes animation-name from {style} to {style}". style me kuch de sakte hai jaise color, background-color, font-size, etc.
+ Animation Properties
+ 1.animation-name
+ 2.animation-duration: iska matlab hai ki kitne time tak animation chalani hai.
+ 3.animation-timing-function: iska matlab hai ki kaise chalani hai animation.
+ 4.animation-delay: iska matlab hai ki kitne time baad animation chalani hai.
+ 5.animation-iteration-count: iska matlab hai ki kitni baar animation chalani hai.
+ 6.animation-direction: isme 2 values hoti hai ek normal aur ek reverse. normal me animation ek hi direction me chalegi aur reverse me animation ulta chalegi. 
+ aur two hoti hai direction
+ alternate: isme hamara animation normal me ek baar jata hai fir reverse me jata hai. aur yahi chalta rahta hai.
+ alternate reverse: isme hamara animation reverse me jata hai fir normal me jaata hai. 
+ 
+ % in Animatiion: iss tarah se bhi hum animation de sakte hai matlab kitne persent me kya kya hoga.
+ 
+ syntex: @keyframe animation name {
+ 0%{ }
+ 50% { }
+ 100% { } */
+ div{
+    border: 2px solid black;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation-name: disco;
+    animation-duration: 2s;
+    /* animation-timing-function: ease-in; */
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+
+ }
+ /* @keyframes disco{
+    from{
+        background-color: aqua; 
+        left: 100px;
+    } to{
+        background-color: red; 
+        left: 500px;
+        color: violet;
+    }
+ } */
+  @keyframes disco{
+    0%
+    {
+        background-color: aqua; 
+        left: 100px;
+    } 50%{
+        background-color: red; 
+        left: 500px;
+        color: violet;
+    } 100%{
+        background-color: yellow; 
+        left: 100px;
+    }
+}

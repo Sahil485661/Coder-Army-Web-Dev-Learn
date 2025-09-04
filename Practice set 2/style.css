@@ -1,0 +1,15 @@
+h1{
+    text-transform: capitalize;
+    text-align: center;
+}
+body{
+    font-family: cursive;
+    background-color: transparent;
+}
+#outer{
+    font-size: 25px;
+
+}
+#inner{
+    font-size: 10px;
+}

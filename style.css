@@ -1,0 +1,52 @@
+/* for free icons we use this website font awesome */
+
+p
+{
+    color:aliceblue;
+    text-align:center;
+}
+button
+{
+    background-color:rgb(240, 260, 10);
+    color: rgb(6, 71, 127);
+    cursor: pointer;
+    padding: 10px 5px;
+
+}
+body
+{
+    background-color: sandybrown;
+}
+/* 
+    *{} is universal selector . they can style full html file  */
+*{
+    font-style: italic;
+}
+/* #{} is id selector . This is should be one not multiple same name id */
+#head1
+{
+    color: magenta;
+    text-decoration: underline;
+}
+/* .{} is class selector . This is can be multiple same name class */
+.class1
+{
+    color: green;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+pre{
+    text-decoration:aqua underline;
+     /* font wieght tag is use to add boldness in text it is ranged in 100 to 900 and after the 400 the text will be bold */
+     font-weight: 900;
+     /* font family is give the multiple font style like arial etc */
+     font-family:cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     /* line hieght ka use text line ke beech gape ko kam ya jyada kar sakte hai */
+     line-height: 39px;
+     /* text ttransform ka use text ko uppercase aur capitalize kar sakte hai */
+     text-transform: capitalize;
+     
+
+}

@@ -1,0 +1,59 @@
+/* Flexbox(Flexible Box Layout)-kisi bhi parent element ko flex container banane ke liye hume uss element ke display tag ko flex set karna pada hai.*/
+
+/* Flexbox(Flexible Box Layout)-flex container ke andar jitne bhi child elements hote hain unko hum flex items kehte hain. */
+/* Flex Direction: yeh ye batata hai ki jo container ke ander item hai wo kaha par place hoga saath hi kis direction me set karna hoga .
+flex direction four types ke hote hai.
+
+flex-direction: row - ye direction by default set hoti hai
+
+flex-direction: row-reverse - isme row direction ke opposite me items set hote hain. jaise ki yadi row direction me left se right ki taraf items set hote hain to row-reverse me right se left ki taraf set hote hain.
+
+flex-direction: column - isme items top se bottom ki taraf set hote hain.
+
+flex-direction: column-reverse - isme items bottom se top ki taraf set hote hain.*/
+ */
+body{
+    text-align: center;
+
+}
+/* Justify content: flex item ko align karne ke liye justify content ka use karte hai. ye batata hai ki main axis ke along element ka kya alignment rahega. ye kai types ke hote hai but mainly it has only four types.
+flex-start: iska matlab hi main access ka start matlab yadi flex direction row hai toh uska flex start row hi hoga jisse element me koi change nahi hoga .
+
+flex-end : iska matlab hai ki jo flex box ke ander element hai wo pura ka pura end side container ke ho jaayega but serialty me koi bhi change nahi hoga.
+
+center : Iska use karne se jo element container ke ander hota hai wo center me aa jaat hai.
+ Space around: iska use karne se container ke ander element ke beeche me space aa jata hai*/
+div{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    justify-content: center;
+}
+/* align-item: iska use karke hum apne container ke ander available sabhi item ko ek saath align kar sakte hai jaise flex-end/flex-start/center etc.
+
+align-self: align self ke through hum particular item ko directly align kar sakte hai. jaise flex-end/flex-start/center etc.
+Inka use hamne Practtiice set 6 me kiya hai*/
+
+/*priority wise align self ki jyada priority hoti hi as compare to align-item*/
+#container{
+    width: 800px;
+    height: 200px;
+
+}
+#box1{
+    background-color: aqua
+}
+#box2{
+    background-color: blueviolet
+}
+#box3{
+    background-color: brown
+}
+#box4{
+    background-color: burlywood
+}
+#box5{
+    background-color: cadetblue
+}

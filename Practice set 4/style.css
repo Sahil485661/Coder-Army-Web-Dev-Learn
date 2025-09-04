@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+header{
+    background-color: #0f1111;
+}
+#logo{
+    font-size: 25px;
+    color: #f08804;
+    text-decoration: none;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+div{
+    color: black;
+    cursor: pointer;
+    border: solid 2px ;
+    padding: 20px;
+    display: inline-block;
+}
+button{
+    background-color: #f08804;
+    border-radius: 50px;
+    padding: 5px;
+}
+footer{
+    background-color: #0f1111;
+    text-align: center;
+}
+nav{
+    height: 670px;
+}

@@ -1,0 +1,25 @@
+/* Units in css
+Relative Units 
+1. Percentage(%)-yeh kuch iss prakar se hota hai Jaise div ke anderr ek aur div create karte hai tob ek parent div banta hai aur ek child div banta tab tab yadi child div ka width 20% karte hai toh woh 20% define hoga parent div ke size se .
+
+2.em- ye unit ka use iss prakar se hota jaise parent div ka font size yadi 10px kar dete hai tab yadi div 2 me yadi font size 2 em karenge toh div2 me font size 2*10 hokar 20 px ka font size ho jata hai. but kuch jagah khud ka font size bhi ho sakta hai em lagane ka matlab.
+3.Rem(Root em)- font size of root em matlab html ka font size hota hai yadi html ka font size 16px hota hai toh 1 rem 16px hota hai. aur yadi koi div 2 rem ka font size hota hai toh woh 2*16=32px ka font size hota hai.
+Other Units
+1. vh- viewport height- yadi hum vh ka use karte hai toh woh viewport (browser) height ke according size define karta hai.
+2. vw- viewport width- yadi hum vw ka use karte hai toh woh viewport (browser) width ke according size define karta hai.
+*/
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(5, 246, 50);
+    font-size: 10px;
+}
+#box2{
+    width: 50%;
+    height: 50%;
+    background-color: rgb(128, 0, 0);
+    margin-left: 20%;
+    font-size: 2em;
+    width: 5rem;
+    height: 100vh;
+}

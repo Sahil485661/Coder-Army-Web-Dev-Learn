@@ -1,0 +1,37 @@
+/* Display properties
+display:inline/inline block/block/none
+1.inline - ye inline property se kisi bhi block ko utna space milta hai jitna usko jaruri hota hai .Ye inline property ka use karne par na hi phir top/bottom margin aur na hi top/bottom padding work karti hai matlab ki lagane ka koi matlab nahi rah jata hai.
+
+2.block - ye block property se kisi bhi block ko pura space milta hai jitna usko chahiye hota hai.iska use  kisi inline element ko block me convert karne ke liye use karte hai. Ye block property ka use karne par top/bottom margin aur top/bottom padding work karti hai.
+
+3.inline-block: yeh property bhi same hi hai but isme hum margin aur padding ka use kar sakte hai. That means work karta hai.
+
+4.None: iss display property ka use karke hum element ko hi hata sakte hai   */
+div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    /* display: inline; */
+    display: inline-block;
+}
+button{
+    display: block;
+}
+#one{
+    background-color: green;
+    display: none;
+}
+#two{
+    background-color: blue;
+}
+#zero{
+    background-color: violet;
+    /* "visibality:hidden" iska use karne se element hat jaata hai par uska place show hota hai jisse pata chalta hai yaha pe kuch tha */
+    visibility: hidden;
+}
+#three{
+    /* Opecity rgba me a matlab alpha hota hai. iski vakue 0-1 ke beech hoti hai jisse hum ek colour ko dark ya light kar sakte hai jitni kam value alpha ki hogi color utna hi light me hoga maximum value 1 karne par color dark hota jata hai */
+    background-color: rgba(255, 0, 0, 0.3);
+}

@@ -1,0 +1,77 @@
+div{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+/* position-THe position are use to define the element postion. ye four types ki hoti hai 
+1. Static- by default all element static hi hote hai. aur iss position ko use karne par top right bottom left kaam nahi karta hai.
+
+2. relative- jab relatives position ka use karte hai toh jo element ki position hum relative set karte hai toh wo element apne position se relate karke utne diameter position change karta hai jitna dete hai. isme top, bottom, left, right , z-index kaam karta hai.
+
+3. absolute-iss position me jo element hota hai wo apne closest(sabse pass) ancester se position track karke apna position change karta hai.jaise iss index1.html tag me body tag ancester hai div ka toh jo bhi position me change karnege wo sub bodytag ke according karenge.
+
+4. fixed- isme  postion jo hoti hai element ki wo browser se track karke apne position change karte hai 
+
+5. sticky- iss position ka use karte hai toh jo scroll karte time yadi koi element ko sticky podition set karte hai toh wo element jab screen me aata hai toh wo uper top me jaake chipak jata hai.
+
+6. z-index- It decidea the stack level of elements. Overlapping element with a larger z-index cover those with a smaller one . z-index ya toh positive ho sakta hai ya negative aur 0 (auto) . yeh static position me kaam nahi karta hai.
+        positve z-index:1/2/3 isme hamara element overlapped element ke uper aa jata hai.
+        
+        nigative z-index:-1/-2//-3 isme hamara element overlapped element ke piche chala jaata hai. */
+
+#box1{
+    position: static;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+    
+}
+#box2{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: green;
+    z-index: -1;
+}
+#box3{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: blue;
+    z-index: -1;
+}
+/*  
+background me image lagane ke liye hum "backgroung-image:" tag ka use karte hai. iske through hum kahi bhi apne page me background me image laga sakte hai
+
+background-size: iska use hum background image ke size ko fix karne ke liye karte hai. iske three types hai.
+    1. Cover: iske use se hum image ko pura fit kara sakte hai kisi bhi area me
+    
+   2. Contain: contain ka use jab karte hai toh image toh element aa jaati par wo image repeat hoti jaati hi. jabki image apne size me rahti hai
+    
+   3. auto: By default background image size auto me rahta hai.*/
+#box4{
+    position:fixed;
+    top: 100px;
+    right: 20px;
+    background-image: url(learning_path.png);
+    /* her used cover*/
+    background-size: cover;
+}
+#box5{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: yellow;
+}
+#box6{
+    position:fixed;
+    left: 60%;
+    top: 13.6%;
+    background-image: url(Koyal.jpg);
+    /* her useed contain */
+    background-size: contain;
+    /* image repeat na ho iss liye backgroound repeat ka use karte hai */
+    background-repeat: no-repeat;
+}

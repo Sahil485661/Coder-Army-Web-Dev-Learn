@@ -1,0 +1,30 @@
+div{
+    height: 100px;
+    background-color: aqua;
+    width: 100px;
+    /* border-width: 3px;
+    border-style: solid;
+    border-color: red; */
+    text-align: center;
+    text-align: center;
+    /* margin do box ke beech ka gape margin kahlata hai isse px me dete hai 
+    1. "margin : px;" iss tarah se margin de sakte hai. iss tarah se margin chaaro taraf ek samaan hota hai
+    2. "margin :top right bottom left" clock wise me ek saath de sakte hai */
+    border: 3px solid red;
+    border-radius: 50px;
+    line-height: 90px;
+}
+button{
+    background-color: rgba(255, 34, 0, 0.84);
+    /*padding content aur border ke beeche ka gape ko padding kahte hai isko px me likhna hota hai.
+    isko many type se kiya ja sakta hai  
+    1. "padding" bas likh ke padding content ke chaaro taraf ek samaan de sakte hai
+    2. "padding-left" likh ke left se padding de sakte hai
+    3. "padding-top" likh ke padding top se de sakte hai 
+    4. "padding :top right bottom left;" iss tarah se bhi padding de sakte hai isme clock wise padding dee hai  */
+    padding :15px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
