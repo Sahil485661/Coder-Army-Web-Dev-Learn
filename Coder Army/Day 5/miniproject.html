@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1 style="text-align: center;">University Registration Form</h1>
+    <p>Please Fill out the form below to register</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Personal Details</h2>
+        <form action="">
+            <label for="first">First Name</label>
+            <input type="text" name="ufirstname" id="first">
+            <br><br>
+            <label for="last">Last Name</label>
+            <input type="text" name="ulastname" id="last">
+            <br><br>
+            <label for="date">Date of Birth</label>
+            <input type="date" name="ubirth" id="date">
+            <br><br>
+            <label for="">Gender:</label>
+            <br>
+            <input type="radio" name="gender" id="male" value="Male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="female">Female</label>
+            <br>
+            <input type="radio" name ="gender" id="other" value="Other">
+            <label for="other">Other</label>
+            <br><br>
+            <label for="upload">Upload Your Photo</label>
+            <br>
+            <input type="file" name="photo" id="upload">
+        </form>
+    </div>
+    <hr>
+    <div>
+    <form action="">
+        <h2>Contact Information</h2>
+        <br>
+        <label for="mail">Email Address</label>
+        <input type="email" name="email" id="mail" placeholder="fei@example.com">
+        <br><br>
+        <label for="mobile">Phone Number</label>
+        <input type="tel" class="Cnumber" id="mobile" placeholder="1234567890">
+        <br><br>
+        <label for="Address">Mailing Address</label>
+        <br>
+        <textarea type="message" name="Uaddress" id="Address"></textarea>
+    </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Academic Information</h2>
+        <form action="">
+            <label for="course">Select course:</label>
+            <br>
+            <select name="ucourse" id="course">
+                <option value="">Select your course</option>
+                <option value="Computer Science" name="ucourse">Coumputer Science</option>
+                <option value="Machenical" name="ucourse">ME</option>
+                <option value="Electrical Eng." name="ucourse">E.E.</option>
+            </select>
+            <br><br>
+            <label for="">Extracurricular Interests</label>
+            <br>
+            <input type="checkbox" name="Interests" value="Book Reading">
+            <label for="">Book Reading</label>
+            <input type="checkbox" name="Interests" value="Music">
+            <label for="">Music</label>
+            <input type="checkbox" name="Interests" value="Sports">
+            <label for="">Sports</label>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Create Your Account</h2>
+        <br>
+        <form action="">
+            <label for="password">Create Password</label>
+            <input type="password" name="upassword" id="password">
+            <br><br>
+            <label for="answer">Security Question: What was your First pet name</label>
+            <br><br>
+            <label for="answer">Security Answer</label>
+            <input type="text" name="Sanswer" id="answer">
+            <br><br>
+            <input type="checkbox" name="T&C" value="Accepted" id="term">
+            <label for="term">I accept all term and condition</label>
+            <br><br>
+            <button type="submit">Register</button>
+            <input type="reset" value="Clear Form">
+        </form>
+    </div>
+</body>
+</html>
