@@ -1,0 +1,27 @@
+h1{
+    /* Isme content-box me sizing me content box ka size hota hai  
+    Agar aap padding ya border add karte ho, to wo extra space lete hain.*/
+    box-sizing: content-box;
+    height:200px;
+    width: 200px;
+    background-color: yellow;
+    padding: 10px;
+    border-color: black;
+    border: solid;
+    border-width: 5px;
+}
+h2{
+    /* isme border-box me size jo hota  teeno cheeze ko milakar banta hai
+    width + padding + border = actual rendered width
+    height + padding + border = actual rendered height
+*/
+    box-sizing: border-box;
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-width: 5px;
+    border: solid blue;
+
+
+}

@@ -1,0 +1,38 @@
+h1{
+    background-color: orange;
+    text-align: center;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.unifrakturmaguntia-regular {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+h2{
+    background-color: white;
+    text-align: center;
+}
+h3{
+    background-color: green;
+    text-align: center;
+}
+.ashok{
+    background-color: white;
+}
+#div1{
+    font-size: 10px;
+}
+h4{
+    /* em unit hamesha apne parent ke multiple me hogi
+     div parent font size 10px
+     so  h4 font size 2em = 10*2; */
+    font-size: 2em; 
+}
+p{
+    text-align: center;
+    /* It is always multiple of root and . here root are <html></html> */
+    font-size: 2rem;
+}
+/* Percentage is always growing every time by the percentage of their parent tag */
