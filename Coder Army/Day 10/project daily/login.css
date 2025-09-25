@@ -1,0 +1,53 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color:chartreuse;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#form{
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    background-color: azure;
+    padding: 20px;
+
+}
+h1{
+    color: rgb(126, 15, 224);
+    text-align: center;
+    font-weight: 600px;
+}
+
+label{
+    cursor: text;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+input{
+    display: block;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+button{
+    background-color: blueviolet;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: bisque;
+    height: 800px;
+    display: flex;
+    color: blue;
+    /* Flex direction row or columm ho sakta hai. "main axis wahi hoga jo flex direction rahega yadi row hai
+    toh main axis row hoga"*/
+    flex-direction: row;
+    /* justify content main axis ke around kaam karta hai. */
+    justify-content: center;
+    /* Flax-wrap by default nowrap set rahta hai  */
+    flex-wrap: wrap;
+    /* iske thourgh sabhi item cross axis ke align kaam karenge like center me beech me jayenge  */
+    align-items: center;
+    
+}
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+
+}
+#First{
+    background-color: aquamarine;
+    border: 2px solid black;
+    flex-grow: 1;
+    flex-shrink: 2;     
+
+}
+#Second{
+    background-color: pink;
+    border: 2px solid black;
+    flex-basis: 200px;
+}
+#Third{
+    background-color: magenta;
+    border: 2px solid black;
+    /* align self se hamara jo bhi child hoga uska position change group me hona  band ho jata hai */
+    align-self: baseline;
+
+}
+#Fourth{
+    background-color: yellowgreen;
+    border: 2px solid black;
+}
