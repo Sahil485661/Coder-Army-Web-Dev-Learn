@@ -12,9 +12,12 @@ body{
     height: 100vh;
 }
 #form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 10px;
-    height: 500px;
-    width: 300px;
+    height: 100vh;
+    width: 400px;
     background-color: azure;
     padding: 20px;
 
@@ -23,6 +26,7 @@ h1{
     color: rgb(126, 15, 224);
     text-align: center;
     font-weight: 600px;
+    margin: 10px;
 }
 
 label{
@@ -36,7 +40,7 @@ input{
     display: block;
     height: 40px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px;
     width: 100%;
 }
@@ -50,4 +54,41 @@ button{
     cursor: pointer;
     border-radius: 5px;
 }
-
+a{
+    color: rgb(151, 88, 6);
+    font-weight: 600;
+}
+p{
+    margin: 10px;
+    font-weight: 600;
+}
+#extra{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#google{
+    background-color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: small;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#facebook{
+    margin-top: 5px;
+    background-color:cornflowerblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: small;
+}
+#LinkedIn{
+    border: 2px solid cornflowerblue;
+    margin-top: 5px;
+    border-radius: 10px;
+    font-size: small;
+    background-color: cornflowerblue;
+}

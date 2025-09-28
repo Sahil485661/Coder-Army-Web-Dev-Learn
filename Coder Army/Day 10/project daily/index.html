@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>japan flag</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login here</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div id="container">
-    <div class="body" id="flag_body">
-        <div id="circle"></div>
-    </div>
+    <div id="form">
+            <h1>Welcome User</h1>
+            <form action="">
+                <label for="name">User Name</label>
+                <input type="text" name="uname" id="name" placeholder="Enter your User name">
+                <br>
+                <label for="pass">Password</label>
+                <input type="password" name="upass" id="pass" placeholder="Enter your Password" enterkeyhint="go">
+                <button type="submit">Login</button>
+            </form>
+            <p>If you Don't have Account <a href="signup.html" target="_blank">Sign-up here</a></p>
+            <p>-----------Login With------------</p>
+            <div id="extra">
+            <div id="google"><p><a href="https://www.google.com" target="_blank">Google</a></p></div>
+        <div id="facebook"><p><a href="https://www.facebook.com/" target="_blank">Facebook</a></p></div>
+        <div id="LinkedIn"><p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p></div></div>
     </div>
 </body>
 </html>
