@@ -1,0 +1,42 @@
+/* Isme hum kya kiye hai ki ek div ko rotate kara rahe hai aur uske upar ek div ko
+rakh de rahe hai aur transformation translate karke x axis me 350px 
+kar diye jisse main div ghumega but wo nahi dikhega uske upar wala div jo rakhe hai 
+wo dikhega kyunnki background color main container div ko nahi diye hai 
+sirf box div ko diye hai*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 10px;
+    height: 400px;
+    width: 400px;
+    animation-name: move;
+    animation-duration: 5s;
+    
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.box{
+    box-shadow: 0px 0px 40px yellow;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    transform: translateX(350px);
+}

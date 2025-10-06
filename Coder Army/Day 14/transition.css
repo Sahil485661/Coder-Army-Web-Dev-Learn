@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    transition-property: background-color height;
+    /* transition-property: height; */
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+    /* Handson way
+    transition: t-property t-duration t-t-function t-delay
+    transition: all 3s linear 2s */
+}
+.container:hover{
+    background-color: yellow;
+    height: 300px;
+
+
+}

@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    gap: 10px;
+
+}
+.container{
+    font-size: 40px;
+    background-color: rebeccapurple;
+    height: 200px;
+    width: 200px;
+    transition: all 2s;
+    transition-timing-function: linear;
+
+}
+.container:hover{
+    /* transform: skewX(30deg); */
+    transform: rotateY(20deg);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 40px;
+    background-color: rgb(8, 235, 34);
+    height: 200px;
+    width: 200px;
+    transition: all 2s;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes move {
+    from{
+        transform: rotate(0deg) translateX(200px);
+    }
+    to{
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+.box:hover{
+    transform: rotateX(40deg);
+    transform: rotatey(-20deg);
+}
