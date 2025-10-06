@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+    padding: 10px;
+    background-color: blueviolet;
+    height: 100px;
+    width: 600px;
+    margin: 10px;
+    font-size: 40px;
+}
+p{
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2ms;
+    animation-duration: 4s;
+    color: white;
+    margin-left: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes move {
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: 0%;
+    }
+}
