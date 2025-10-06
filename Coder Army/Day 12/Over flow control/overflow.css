@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overflow{
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+
+
+}
+.overflow{
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+
+}

@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(255, 162, 0);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px rgb(255, 162, 0);
+}
