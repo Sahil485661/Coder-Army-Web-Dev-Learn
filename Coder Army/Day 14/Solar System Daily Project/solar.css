@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('https://wallpapercave.com/wp/wp4566762.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+.container{
+    height: 800px;
+    width: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: move;
+    animation-duration: 10;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    perspective: 800px;
+}
+.box{
+    color: #00ffff;
+    text-shadow:0 0 10px #21c3dc;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
+    font-size: small;
+    animation-name: leo;
+    animation-duration: 10;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes leo {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.sun{
+
+    font-size: 30px;
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    background-image: url('https://i.pinimg.com/736x/df/ad/f1/dfadf1ffdb9194a3c91c6686e26f86c2.jpg');
+    background-size:center;
+    background-position: center;
+    
+    box-shadow: 0px 0px 50px rgb(255, 149, 0);
+}
+.marcury{
+    background-color: #B2BEB5;
+    box-shadow: 0px 0px 40px #708090;
+    font-size: small;
+    background-image: url('https://img.freepik.com/premium-psd/mercury-planet-isolated-transparent-background_436336-238.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    animation-name: marcury;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes marcury {
+    from{
+        transform: rotate(0deg) translateX(8vw);
+    }
+    to{
+        transform: rotate(360deg) translate(8vw) rotate(-360deg);
+    }
+}
+.venus{
+    box-shadow: 0px 0px 40px #999966;
+    font-size: small;
+    transform: rotate(180deg) translateX(24vw) rotate(-180deg);
+    height: 50px;
+    width: 50px;
+    background-image: url('https://img.freepik.com/premium-photo/detailed-artists-rendering-ganymede-with-dark-silver-orange-areas_899449-420954.jpg');
+    background-size: cover;
+    background-position: center;
+    animation-name: venus;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes venus {
+    from{
+        transform: rotate(0deg) translateX(12vw);
+    }
+    to{
+        transform: rotate(360deg) translate(12vw) rotate(-360deg);
+    }
+}
+.earth{
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://tse1.explicit.bing.net/th/id/OIP.Eq8IFbUDmC9KAqOV1wUi4gHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');
+    box-shadow:0px 0px 40px #0066ff;
+    font-size: small;
+    height: 60px;
+    width: 60px;
+    /* tranform ordered way me work karta hai first rotate apne ansester ke  cicular way me round me kitne angle pe jana hai ye batata hai
+    2. translate ye X asix and y axis pe work karta hai means axis me kinti duur hoga div uske liye.
+    3. third again rotate iss liye hota hai ki first rotaote me content bhi rotate ho jaata hai . yaha wahi value '-' karne par under ka written content sedha ho jata hai */
+    transform: rotate(10deg) translateX(28vw) rotate(-10deg);
+    animation-name: earth;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes earth {
+    from{
+        transform: rotate(0deg) translate(16vw);
+    }
+    to{
+        transform: rotate(360deg) translate(16vw) rotate(-360deg);
+    }
+}
+.mars{
+    font-size: small;
+    height: 60px;
+    width: 60px;
+    background-color: #E27B58;
+    box-shadow: 0px 0px 20px #ff9d6f;
+    transform: rotate(150deg) translateX(30vw) rotate(-150deg);
+    background-image: url('https://solarsystem.nasa.gov/internal_resources/3841');
+    background-position: center;
+    background-size: cover;
+    animation-name: mars;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes mars {
+    from{
+        transform: rotate(0deg) translate(20vw);
+    }
+    to{
+        transform: rotate(360deg) translate(20vw) rotate(-360deg);
+    }
+}
+.jupiter{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    box-shadow: 0px 0px 40px #90614D;
+    transform: rotate(350deg) translateX(38vw) rotate(-350deg);
+    background-image: url('https://t3.ftcdn.net/jpg/07/12/88/96/360_F_712889693_vQ1Sq2x8OXIy89V8ujLEC5opkx0NnulL.jpg');
+    background-position: center;
+    background-size: cover;
+    animation-name: jupiter;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+@keyframes jupiter {
+    from{
+        transform: rotate(0deg) translate(25vw);
+    }
+    to{
+        transform: rotate(360deg) translate(25vw) rotate(-360deg);
+    }
+}
+.saturn{
+    height: 90px;
+    width: 90px;
+    background-color: #999966;
+    box-shadow: 0px 0px 40px #999966;
+    background-image: url('https://cdn.pixabay.com/photo/2012/04/10/17/38/saturn-26618_1280.png');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(150deg) translateX(40vw) rotate(-150deg);
+    animation-name: saturn;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes saturn {
+    from{
+        transform: rotate(0deg) translate(30vw);
+    }
+    to{
+        transform: rotate(360deg) translate(30vw) rotate(-360deg);
+    }
+}
+.utanus{
+    height: 90px;
+    width: 90px;
+    background-color: #999966;
+    box-shadow: 0px 0px 40px #21c3dc;
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.UhNao-z6Gr3tHBLi7hJhZQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-position: center;
+    background-size: cover;
+    animation-name: utanus;
+    animation-duration: 19s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes utanus {
+    from{
+        transform: rotate(0deg) translate(35vw);
+    }
+    to{
+        transform: rotate(360deg) translateX(35vw) rotate(-360deg);
+    }
+}
+.neptune{
+    height: 90px;
+    width: 90px;
+    background-color: #999966;
+    box-shadow: 0px 0px 40px #21c3dc;
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP._FksE6lpHJQJZEW_To0-eAHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(60deg) translateX(40vw) rotate(-60deg);
+    animation-name: neptune;
+    animation-duration: 21s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes neptune {
+    from{
+        transform: rotate(0deg) translate(38vw);
+    }
+    to{
+        transform: rotate(360deg) translate(38vw) rotate(-360deg);
+    }
+}
+@media screen and (maxwidth: 400) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+    .sun{
+        height: 40px;
+        width: 40px;
+    }
+}
