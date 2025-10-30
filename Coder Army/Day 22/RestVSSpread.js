@@ -7,7 +7,7 @@ function greetAll(...names) {
 const people = ["Sahil", "Aman", "Riya"];
 greetAll(...people); // Spread used to pass array as args
 
-function sum(...nums) {
+function sum(...nums) {     //Rest operator
   console.log(nums); // [1, 2, 3, 4]
 }
 sum(1, 2, 3, 4);
