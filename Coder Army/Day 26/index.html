@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button-1{
+            border-radius: 10px;
+            padding: 5px 15px;
+            border: none;
+            color: rgb(2, 30, 2);
+            background-color: lightgreen;
+        }
+        #button-2{
+            border: black solid 3px;
+            border-radius: 10px;
+            padding: 5px 35px;
+            text-transform: uppercase;
+        }
+        #button-3{
+             border-radius: 10px;
+            padding: 5px 15px;
+            border: none;
+            color: rgb(2, 30, 2);
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello My Name is Sahil I want to deploy a project with HTML, CSS and Javascript</h1>
+    <button id="Click" onclick= "prompt('Enter Your Age')">Click for Deploy</button>
+    <button id="Click-me" onclick= "alert('Please Help me')">Click for Deploy</button>
+    <hr>
+    <br>
+    <button class="button" id="button-1" onclick="cartQuerry+=1; document.querySelector('#bag').innerHTML=`your bag has added ${cartQuerry} item`">Add To Bag</button>
+    <button class="button" id="button-2" onclick="cartQuerry-=1; document.querySelector('#bag').innerHTML=`your bag has added ${cartQuerry} item`">Move to Wishlist</button>
+    <button class="button" id="button-3" onclick="cartQuerry+=2; document.querySelector('#bag').innerHTML=`your bag has added ${cartQuerry} item`">Add 1+1 Sale Item</button>
+    <h1 id="bag"></h1>
+
+
+    <script>
+        let cartQuerry = 0;
+        document.querySelector('#bag').innerHTML= `Your bag has added ${cartQuerry} item`
+    </script>
+</body>
+</html>
