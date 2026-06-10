@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurd Operator</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <p>Enter your Age</p>
+    <input id="star" type="number">
+    <button onclick="let age = document.querySelector('#star').value;
+    let status = age ?? 18 ; //default operator
+    //here 18 is a default age 
+    //guard Operator: value || defaultValue
+    //Use when a fallback value is needed.
+    //default Operator: value ?? fallbackValue
+    //Use when you want to consider only null and undefined as falsy.
+    document.querySelector('#show').innerHTML= `Your Age is ${status}` ">Save</button>
+    <p id="show"></p>
+    <script>
+
+    </script>
+</body>
+</html>

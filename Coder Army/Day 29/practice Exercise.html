@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro ticket discount calculator</title>
+</head>
+<body>
+    <h1>Metro Ticket Calculator</h1>
+    <label for="">Please select your Gender</label>
+    <select name="Gender" id="gender">
+        <option value="">Select your Gender</option>
+        <option value="Male" >Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+    <br><br>
+    <label for="">Please Select your age</label>
+    <input id="age" type="number" placeholder="Age">
+    <button id="Calculate" onclick="calculate()">Calculate</button>
+    <h3 id="result"></h3>
+    <script>
+        
+        
+        function calculate(){
+            let gender = document.querySelector('#gender').value;
+            let age = Number(document.querySelector('#age').value);
+            let result;
+            if( age < 5){
+                result = 'you got 100% discount';
+            }
+            else if(gender === 'Female' || age <= 8 ){
+                result = `You got 50% discount`;
+            } 
+            else if(age > 65){
+                result = 'you got 30% discount';
+            }
+            else{
+                result = 'you got 0% discount';
+            }
+            document.querySelector('#result').innerHTML = result;
+        }   
+    </script>
+</body>
+</html>
