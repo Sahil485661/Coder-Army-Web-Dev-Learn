@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello here you will play bat ball stump game..</h1>
+    <button onclick="let userMove = 'Bat';
+    let computerMove = compmove();  playGame(userMove, computerMove);">Bat</button>
+    <button onclick="userMove = 'Ball';
+    computerMove = compmove(); playGame(userMove, computerMove);">Ball</button>
+    <button onclick="userMove = 'Stump';
+    computerMove = compmove(); playGame(userMove, computerMove);">Stump</button>
+    <h1 id="result"></h1>
+    <script>
+        function compmove(){
+            let move = Math.random()*3; let choice;
+            if(move > 0 && move < 1){
+                choice = 'Bat';
+            }
+            else if(move >1 && move < 2){
+                choice = 'Ball';
+            }
+            else if(move > 2){
+                choice ='Stump';
+            }
+            return `${choice}`;
+        }
+        function result( userMove, computerMove){
+            let ans;
+            if(userMove === 'Bat'){
+                if(computerMove === 'Bat' ){
+                    ans = 'Tie'
+                }
+                else if(computerMove === 'Ball'){
+                    ans = 'User Win'
+                }
+                else if(computerMove === 'Stump'){
+                    ans = 'Computer Win';
+                }
+            }
+            else if(userMove === 'Ball'){
+                if(computerMove === 'Ball'){
+                    ans = 'Tie'
+                }
+                else if(computerMove === 'Bat'){
+                    ans = 'Computer Win';
+                }
+                else if(computerMove === 'Stump'){
+                    ans = 'User Win';
+                }
+            }
+            else if(userMove === 'Stump'){
+                if(computerMove === 'Ball'){
+                    ans = 'Computer Win';
+                }
+                else if(computerMove === 'Bat'){
+                    ans  = 'User Win';
+                }
+                else if (computerMove === 'Stump'){
+                    ans = 'Tie'
+                }
+            }
+            return `This match is ${ans}.`
+            
+        }
+        function playGame(userMove, computerMove, ) {
+            let finalWinner = result(userMove, computerMove)
+            document.querySelector('#result').innerHTML =
+                `User chose ${userMove}. computer has choosen ${computerMove}. ${finalWinner}`;
+        }
+    </script>
+</body>
+</html>
