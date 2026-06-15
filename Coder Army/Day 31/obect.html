@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object</title>
+</head>
+<body>
+    <h1>Namaste JavaScipt</h1>
+    <script>
+        let product = {
+            company : 'Gucci',
+            item_name : 'Belt',
+            item_price: 2999,
+            display_price: function(){
+                console.log(`Price of the product is ${product.item_price}`);
+            }
+        }
+        console.log(product)
+        product.stock = 999;
+        console.log(product.item_price);
+        product.display_price();
+    </script>
+</body>
+</html>

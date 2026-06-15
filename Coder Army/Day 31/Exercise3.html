@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = {
+            name: 'Sahil',
+            Course: 'B.tech',
+            Branch: 'Computer Science',
+            'delivery-time': '5:20',
+        }
+        let {Branch, Course,name} = x;
+        console.log(Branch);
+        console.log(Course);
+        console.log(name);
+        console.log(x.delivery-time); // ❌ its show uncought error
+        console.log(x['delivery-time']) //✅ Its called Bracket Notation
+
+        
+    </script>
+</body>
+</html>

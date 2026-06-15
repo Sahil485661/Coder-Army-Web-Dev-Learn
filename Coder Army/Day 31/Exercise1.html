@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <h1>Myntra Product</h1>
+    <p id="show-product"></p>
+    <script>
+        let product = {
+            name : 'T-Shirt',
+            size : 'XXl',
+            price : 249,
+            rating : 4.5
+        }
+        function display_price(){
+            document.querySelector('#show-product').innerHTML = `Name= ${product.name},
+            Price= ${product.price},
+            Size = ${product.size},
+            Rating = ${product.rating}`
+    }
+    display_price()
+    </script>
+</body>
+</html>

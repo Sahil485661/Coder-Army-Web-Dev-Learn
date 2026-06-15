@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Namaste JavaScipt</h1>
+    <script>
+        let x = 5;
+        let y = x;
+        console.log(`x = ${x}`);
+        console.log(`y = ${y}`);
+        x = 8;
+        // normal yaha value direct copy ho jaati hai iss liye changes ke baad sirf x ki value me effect hota hai y me nahi
+        console.log(`x = ${x}`);
+        console.log(`y = ${y}`);
+
+        let a = {price: 4000};
+        let b = a;
+        console.log(`a = ${a.price}`);
+        console.log(`b = ${b.price}`);
+        a.price = 2000;
+        // Iss experiment se pata chalta hai ki jo object hota hai usme value ka referance only store hota hai iss liye jab main value me changes hota hai toh aage ki value me bhi effect padta hai. Means Object me value ka referance hota hai.
+        console.log(`a = ${a.price}`);
+        console.log(`b = ${b.price}`);
+    </script>
+</body>
+</html>
+<!-- x = 5
+y = 5
+x = 8
+y = 5
+a = 4000
+b = 4000
+a = 2000
+
+b = 2000 -->

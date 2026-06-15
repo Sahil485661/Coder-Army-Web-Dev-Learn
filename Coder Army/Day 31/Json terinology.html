@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name : 'Gucci',
+            size: 'S',
+            price: 5400,
+            rating: {
+                star: 4.6/5,
+                consumer_support: '45%',
+            }
+        }
+        console.log(typeof product);
+        console.log(product);
+        let string = JSON.stringify(product);       //here my object is convert into JSON format
+
+        console.log(typeof string);
+        console.log(string);
+        let Json = JSON.parse(string)               //here my object is convert into object
+        localStorage.setItem('product',JSON.stringify(product));   //here this localstorage is use for store the any thing in json format on the browser example poki game store game score and level. it cannot remove whereas you refresh your browser. Until you could delete cookies.
+
+        // localStorage.clear();  this clear use for delete all saved data 
+        console.log(localStorage.getItem(product))  // this is use for get the saved data
+        let game = 'Chess'
+        localStorage.setItem('game', game)
+        localStorage.removeItem('game')
+
+
+
+
+    </script>
+</body>
+</html>

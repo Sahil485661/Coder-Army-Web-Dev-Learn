@@ -18,6 +18,16 @@
     computerMove = compmove(); playGame(userMove, computerMove);">Stump</button>
     <h1 id="result"></h1>
     <script>
+        let score = {
+            Win : 0,
+            Loss : 0,
+            Tie : 0,
+            displayScore(){
+                return `Total win: ${score.Win}
+                 Total Loss: ${score.Loss}
+                 Total Tie: ${score.Tie}`
+            }
+        }
         function compmove(){
             let move = Math.random()*3; let choice;
             if(move > 0 && move < 1){
@@ -35,34 +45,43 @@
             let ans;
             if(userMove === 'Bat'){
                 if(computerMove === 'Bat' ){
+                    score.Tie ++;
                     ans = 'Tie'
                 }
                 else if(computerMove === 'Ball'){
+                    score.Win ++;
                     ans = 'User Win'
                 }
                 else if(computerMove === 'Stump'){
+                    score.Loss++;
                     ans = 'Computer Win';
                 }
             }
             else if(userMove === 'Ball'){
                 if(computerMove === 'Ball'){
+                    score.Tie++;
                     ans = 'Tie'
                 }
                 else if(computerMove === 'Bat'){
+                    score.Loss++;
                     ans = 'Computer Win';
                 }
                 else if(computerMove === 'Stump'){
+                    score.Win++;
                     ans = 'User Win';
                 }
             }
             else if(userMove === 'Stump'){
                 if(computerMove === 'Ball'){
+                    score.Loss++
                     ans = 'Computer Win';
                 }
                 else if(computerMove === 'Bat'){
+                    score.Win++;
                     ans  = 'User Win';
                 }
                 else if (computerMove === 'Stump'){
+                    score.Tie++;
                     ans = 'Tie'
                 }
             }
@@ -72,7 +91,10 @@
         function playGame(userMove, computerMove, ) {
             let finalWinner = result(userMove, computerMove)
             document.querySelector('#result').innerHTML =
-                `User chose ${userMove}. computer has choosen ${computerMove}. ${finalWinner}`;
+                `User has choosen '${userMove}'. computer has choosen '${computerMove}'. '${finalWinner}' ${score.displayScore()}`
+                // Total win: ${score.Win}
+                // Total Loss: ${score.Loss}
+                // Total Tie: ${score.Tie};
         }
     </script>
 </body>

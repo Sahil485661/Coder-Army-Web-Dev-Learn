@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructuring in Object</h1>
+    <script>
+        let a = {
+            company: 'Tata',
+            job: 'SDE',
+            Salary: 50000
+        }
+        let {Salary} = a;   //that is called Destructuring
+        console.log(Salary)
+        // Another method for destructuring
+        let Job = a.job;
+        console.log(Job);
+        let {job, company} = a;
+        console.log(company);
+        
+
+    </script>
+</body>
+</html>
