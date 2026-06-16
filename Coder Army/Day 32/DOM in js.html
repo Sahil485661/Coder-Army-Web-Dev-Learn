@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS</title>
+</head>
+<body>
+    <div class="my-div">This is a div</div>
+    <script>
+        let button = document.createElement('Button');
+        let para = document.createElement('p');
+        para.textContent ='I am using append child() method for append para tag.'
+        button.textContent = 'Click me'
+        document.querySelector('.my-div').appendChild(button);
+        document.querySelector('.my-div').appendChild(para);
+        document.querySelector('.my-div').removeChild(button);
+        document.querySelector('.my-div').replaceChild(button, para);
+
+
+    </script>
+</body>
+</html>

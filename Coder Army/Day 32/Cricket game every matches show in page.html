@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: none;
+            margin: 20px;
+            background-color: rgb(31, 237, 31);
+            cursor: pointer;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello here you will play bat ball stump game..</h1>
+    <button onclick="let userMove = 'Bat';
+    let computerMove = compmove();  playGame(userMove, computerMove);"><img src="/Coder Army/Day 32/bat.png" alt="bat"></button>
+    <button onclick="userMove = 'Ball';
+    computerMove = compmove(); playGame(userMove, computerMove);"><img src="/Coder Army/Day 32/ball.png" alt=""></button>
+    <button onclick="userMove = 'Stump';
+    computerMove = compmove(); playGame(userMove, computerMove);"><img src="/Coder Army/Day 32/Stump.png"></button>
+    <h3 id="userChoice"></h3>
+    <h3 id="computerChoice"></h3>
+    <h3 id="won"></h3>
+    <h3 id="score"></h3>
+    
+    <button onclick="localStorage.clear('score');
+    resetScore();
+        document.querySelector('#result'). innerHTML =''">Reset</button>
+    <script>
+        let score;
+        let scoreStr = localStorage.getItem('score');
+        resetScore(scoreStr);
+        function resetScore(scoreStr){
+        score = scoreStr ? JSON.parse(scoreStr) : {
+            Win : 0,
+            Loss : 0,
+            Tie : 0,
+            
+        };
+        score.displayScore = function(){
+                return `Total win: ${score.Win}
+                 Total Loss: ${score.Loss}
+                 Total Tie: ${score.Tie}`
+            }
+            playGame()
+        }
+        function compmove(){
+            let move = Math.random()*3; let choice;
+            if(move > 0 && move < 1){
+                choice = 'Bat';
+            }
+            else if(move >1 && move < 2){
+                choice = 'Ball';
+            }
+            else if(move > 2){
+                choice ='Stump';
+            }
+            return `${choice}`;
+        }
+        function result( userMove, computerMove){
+            let ans;
+            if(userMove === 'Bat'){
+                if(computerMove === 'Bat' ){
+                    score.Tie ++;
+                    ans = 'Tie'
+                }
+                else if(computerMove === 'Ball'){
+                    score.Win ++;
+                    ans = 'won by User'
+                }
+                else if(computerMove === 'Stump'){
+                    score.Loss++;
+                    ans = 'won by Computer';
+                }
+            }
+            else if(userMove === 'Ball'){
+                if(computerMove === 'Ball'){
+                    score.Tie++;
+                    ans = 'Tie'
+                }
+                else if(computerMove === 'Bat'){
+                    score.Loss++;
+                    ans = 'won by Computer';
+                }
+                else if(computerMove === 'Stump'){
+                    score.Win++;
+                    ans = 'won by User';
+                }
+            }
+            else if(userMove === 'Stump'){
+                if(computerMove === 'Ball'){
+                    score.Loss++
+                    ans = 'won by Computer';
+                }
+                else if(computerMove === 'Bat'){
+                    score.Win++;
+                    ans  = 'won by User';
+                }
+                else if (computerMove === 'Stump'){
+                    score.Tie++;
+                    ans = 'Tie'
+                }
+            }
+            return ans;
+            
+        }
+        function playGame(userMove, computerMove, ) {
+            let finalWinner = result(userMove, computerMove)
+            localStorage.setItem('score',JSON.stringify(score));
+            document.querySelector('#userChoice').innerHTML = userMove !== undefined ? `User has choosen '${userMove}`: ''
+            document.querySelector('#computerChoice').innerHTML = computerMove ? `Computer has choosen '${computerMove}`:''
+            document.querySelector('#won').innerHTML = finalWinner !== undefined ? `This match was ${finalWinner}`:'' ;
+            document.querySelector('#score').innerHTML = score.displayScore()
+        
+                // Total win: ${score.Win}
+                // Total Loss: ${score.Loss}
+                // Total Tie: ${score.Tie};
+        }
+    </script>
+</body>
+</html>
