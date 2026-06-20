@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter your name:</label>
+    <input id="name" type="text">
+    <h3 id="show"></h3>
+    <button onclick="let name = document.querySelector('#name').value || 'Dear';
+    greet(name)">Click me</button>
+    <script>
+        // let name = document.querySelector('#name').value;
+        let time = new Date();
+        let hour = time.getHours();
+        function greet(name){
+        if(hour > 5 && hour < 12){
+            document.querySelector("#show").innerHTML = `Good Morning ${name}.`
+        }
+        else if(hour > 12 && hour < 18){
+            document.querySelector("#show").innerHTML = `Good After Noon ${name}.`
+        }
+        else {
+            document.querySelector("#show").innerHTML = `Good Night ${name}.`
+        }
+    }
+    </script>
+</body>
+</html>

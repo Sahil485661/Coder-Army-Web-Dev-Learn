@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhail Project</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;   /* Horizontal center */
+            align-items: center;       /* Vertical center */
+            height: 100vh;             /* Full viewport height */
+            margin: 0;                 /* Default margin remove */
+}
+        div{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            border: 2px solid black;
+
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 5px;
+            cursor: pointer;
+            
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .gray{
+            background-color: gray;
+
+        }
+        .black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 >Click Button</h1>
+        <br>
+        <button  onclick="pressedRed()">Red</button>
+        <button onclick="pressedBlue()">Blue</button>
+        <button onclick="pressedGray()">Gray</button>
+        <button onclick="pressedBlack()">Black</button>
+    </div>
+    <script>
+        function pressedRed(){
+            document.querySelector("h1").className = "";
+            document.querySelector("body").className = "";
+            document.querySelector("body").classList.add('red');
+            document.querySelector("h1").classList.add("blue")
+        }
+        function pressedBlue(){
+            document.querySelector("h1").className = "";
+            document.querySelector("body").className = "";
+            document.querySelector("body").classList.add('blue');
+            document.querySelector("h1").classList.add('gray')
+        }
+        function pressedGray(){
+            document.querySelector("h1").className = "";
+            document.querySelector("body").classList.remove("red", "blue", "black");
+            document.querySelector("body").classList.add('gray');
+            document.querySelector("h1").classList.add("red");
+            
+        }
+        function pressedBlack(){
+            document.querySelector("body").classList.remove("red", "blue", "gray");
+            document.querySelector("h1").classList.add('red');
+            document.querySelector("body").classList.add('black');
+        }
+    </script>
+</body>
+</html>

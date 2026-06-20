@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p{
+            width: 100px;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        .odd{
+            background-color: rgba(20, 222, 64, 0.449);
+            color: red;
+        }
+        .even{
+            background-color: blueviolet;
+            color: limegreen;
+        }
+    </style>
+    <title>Counter Button</title>
+</head>
+<body>
+    <button style="cursor: pointer;" onclick="button_pressed()">Counter</button>
+    <p id="show"></p>
+    <script>
+        let number = localStorage.getItem('number') || 0;
+        function button_pressed(){
+            number++;
+            localStorage.setItem('number', number);
+            document.querySelector("#show").innerHTML= number;
+            count()
+        }
+        function count(){
+            
+            let p = document.querySelector("#show")
+            document.querySelector("#show").innerHTML= number;
+            if(number %2 ==0){
+                document.querySelector("button").classList.remove('odd');
+                document.querySelector("button").classList.add('even')
+                p.classList.remove('odd');
+                p.classList.add('even');
+            }
+            else{
+               p.classList.remove('even');
+                p.classList.add('odd');
+                document.querySelector("button").classList.remove('even');
+                document.querySelector("button").classList.add('odd')
+            }
+
+
+        }
+        count()
+    </script>
+</body>
+</html>
