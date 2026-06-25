@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .double{
+            
+            width: 120px;
+            color: blue;
+            background-color: rgb(244, 145, 7);
+        }
+    </style>
+</head>
+<body>
+    <button class="zoom">Click for zoom</button>
+    <script>
+            let max = document.querySelector(".zoom");
+            let de = () => {
+            max.className='';
+            let change = ()=>max.classList.add('double')
+            setTimeout(change,2000);//setTimeout me function chaiye hota hai . aur milisecond me time.
+            }
+            max.addEventListener('click', de);
+    </script>
+</body>
+</html>

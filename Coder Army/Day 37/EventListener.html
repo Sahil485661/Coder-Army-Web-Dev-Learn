@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+    <h1>When click the <button class="btn">click me</button> See the magic</h1>
+    <div id="container"></div>
+    <script>
+        let button_element = document.querySelector('.btn');
+        // button_element.addEventListener('click', () => {
+        //     alert('Goood Morning Sahil')
+        //     console.log('Good Morning Sahil')
+        // })
+        let behaviour = ()=>{
+            
+            document.querySelector("#container").innerHTML = `<p>Hello This is written by java script</p>`
+        }
+        button_element.addEventListener('click', behaviour);  //addEventListener me second arugument function hona chahiye
+
+        //addEventListener ek element me multiple add kar sakte hai.
+        let magic = event=>{
+            document.querySelector('#container').innerHTML += `<p>${new Date()}</p>` //isme + add karne padega nahi toh overwrite kar dega aur + sign use karne par next line me add kar dega content.
+        }
+        button_element.addEventListener('click',magic )
+    </script>
+</body>
+</html>

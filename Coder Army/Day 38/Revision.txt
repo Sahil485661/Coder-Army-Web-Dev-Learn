@@ -1,0 +1,13 @@
+1. Create a variable multiply and assign a function to this
+variable that multiplies two numbers. Call this method from
+the variable.
+2. Create a function runTwice that takes a function as a
+parameter and then runs that method twice.
+3. Create a button which should grow double in size on
+clicking after 2 seconds.
+4. In the above exercise add the behavior using an event
+listener instead of onclick.
+5. Create a function that sums an array of numbers. Do this
+using a for-each loop.
+6. Create a function that takes an array of numbers and
+return their squares usinq map function.
