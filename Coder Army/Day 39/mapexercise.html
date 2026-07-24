@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #product-container{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        #product{
+            
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+            width: 100vw;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="product-container"></div>
+    <script>
+        let item = [{prduct: "Colgate", price: 10}, {prduct: "Lux", price: 30}, {prduct: "perfume", price: 250}, {prduct:"Shampoo", price: 200}]
+        let container = document.querySelector("#product-container");
+        let productHTML =  item.map((product)=>{
+            return `<div id="product"><h3>Product: ${product.prduct}</h3>
+                            <p>Price: ${product.price}</p>
+                            <button>Add to Cart</button></div>`;
+        }). join('');
+        container.innerHTML  = productHTML;
+    </script>
+</body>
+</html>
