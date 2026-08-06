@@ -45,5 +45,5 @@ box-shodow: offset-x offset-y blur-radius speard radius color; */
 #seven{
     /* inset property give you create shadow inner side of box
     Here box-shodow: inset offset-x offset-y blur-radius color; */
-    box-shadow: inset 10px 10px 20px 0px yellow;
+    box-shadow: inset 20px 10px 20px 0px yellow;
 }

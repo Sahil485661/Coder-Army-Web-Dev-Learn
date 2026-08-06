@@ -17,9 +17,9 @@ body{
 .container{
     margin: 10px;
     height: 400px;
-    width: 400px;
+    width: 100vw;
     animation-name: move;
-    animation-duration: 5s;
+    animation-duration: 10s;
     
     animation-timing-function: linear;
     animation-iteration-count: infinite;

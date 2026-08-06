@@ -1,8 +1,8 @@
 let arr = [34,23,21,423,34];
-// arr.forEach(function(num){
-//     console.log(num)
-// })
-// arr.forEach(num => console.log("Here print arrray second time: "+num))
+arr.forEach(function(num){
+    console.log(num)
+})
+arr.forEach(num => console.log("Here print arrray second time: "+num))
 function search ( arr, num){
     arr.forEach(function(i){
         if(num === i){

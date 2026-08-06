@@ -16,10 +16,14 @@
     //Use when a fallback value is needed.
     //default Operator: value ?? fallbackValue
     //Use when you want to consider only null and undefined as falsy.
+    
+    //Behavior: अगर A truthy है तो result A होगा, वरना result B होगा।
     document.querySelector('#show').innerHTML= `Your Age is ${status}` ">Save</button>
     <p id="show"></p>
     <script>
 
     </script>
+    <!-- || operator falsy values (null, undefined, 0, "", false) को भी fallback कर देता है। -->
+     <!-- ?? (nullish coalescing) operator सिर्फ null और undefined पर fallback करता है। -->
 </body>
 </html>
