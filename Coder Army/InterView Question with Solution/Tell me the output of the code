@@ -1,0 +1,15 @@
+// what will be output come and why?
+// console.log(0.1+0.2 === 0.3)
+
+
+console.log(0.1+0.2 === 0.3) //op: false
+
+
+// why: The Reason: Binary Floating-Point MathJavaScript stores numbers using the IEEE 754 standard (64-bit floating-point numbers).Decimal vs. Binary Representation:Computers convert all numbers into binary (0s and 1s).Numbers like 0.1 (1/10)  and 0.2 (1/5) are clean in base-10, but in binary (base-2), they become infinitely repeating fractions, similar to how frac{1/3} is 0.3333... in base-10.
+
+
+// How to Correctly Compare Floating-Point Numbers
+//Convert to a fixed number of decimal places before comparing.
+
+const result = (0.1 + 0.2).toFixed(1); // "0.3"
+console.log(Number(result) === 0.3);    // Output: true

@@ -1,0 +1,11 @@
+//how to convert it into String
+// let obj = {a:1,
+// b: 2}
+
+//When asked to convert an object to a string in an interview, JSON.stringify(obj) is the exact answer they are looking for.
+let obj = {
+    a:2,
+    b:2
+}
+const str = JSON.stringify(obj)
+console.log(str)
