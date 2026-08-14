@@ -45,13 +45,15 @@ async function main(){
     
     
     const stock = await checkInventory()
-    console.log("Stock in store",stock)
+    console.log("Stock in store",stock) //jo bhi data return karega wo calling ke baad access hoga. jaise yaha resolve ke saath data return hua stock ka.
     setTimeout(()=>{
-        console.log("Other Process is working")
+        console.log("Other Process is working")  //THis request will be completed after 3 seconds. and They not block the main thread
     },3000)
-    await createOrder()
+    await createOrder()  //Here we say that wait for this request to complete after that move on next request
     await chargePayment()
     await sendInvoice()
     
 }
 main()
+
+//Async function kya return karta hai?" — Answer: hamesha ek Promise return karta hai, chahe tum explicitly Promise return karo ya normal value.
