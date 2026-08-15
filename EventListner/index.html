@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Delete
+    </title>
+    <style>
+        img{
+            width: 200px;
+            height: 400px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <ul id="image">
+        <li ><img src="https://i.pinimg.com/originals/fb/d5/b4/fbd5b40faf90f2a1009a23ef26b0145a.jpg" alt=""></li>
+        <li class="image"><img src="https://tse1.explicit.bing.net/th/id/OIP.sl_vfJW_fNi_2XZaDMq4WAHaLH?r=0&w=500&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" alt=""></li>
+        <li><img src="https://64.media.tumblr.com/9e17ae7331635fc2412575cde2767340/3732831bda55ffc2-16/s1280x1920/ed3f93fd1b6aecb0235cf21f0189e49a4bebed86.jpg" alt=""></li>
+        <li><img src="https://i.pinimg.com/736x/eb/2a/75/eb2a75df6a43b2c1e63aa5dbd0728a50.jpg" alt=""></li>
+    </ul>
+</body>
+<script>
+    document.querySelector('#image').addEventListener("click", function(e){
+       
+        //    console.log(e.target.parentNode)
+        //    let removeIt =  e.target.parentNode;
+           //parentNode is not better because If you touch or click indivisually in the screen than removed all element because they directly target the body tag. So don't use it
+        //    removeIt.remove()
+        // }
+        console.log(e.target.tagName)
+         
+        if(e.target.tagName == 'IMG'){  
+            //IF check karega ki img tag hai ya nahi yadi hoga toh uske parent node ko remove kar dega. 
+            let removeIt =  e.target.parentNode
+            console.log(removeIt)
+            removeIt.remove()
+        }
+    }, false)
+</script>
+</html>
